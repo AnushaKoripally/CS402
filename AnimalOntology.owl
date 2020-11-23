@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#"
+     xml:base="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#eaten-by -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#eaten-by">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#eats"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#eats -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#eats">
+        <rdf:type rdf:resource="&owl;TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasPart"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#inhabits -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#inhabits"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#inheres-in -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#inheres-in">
+        <rdfs:comment>to relate dependant to independent entities</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasPart"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#BodyPart"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Plant"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Ant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Ant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Insect"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Omnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Reptile"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Group of Turtle</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bird -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bird">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#BodyPart -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#BodyPart"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Carnivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Carnivore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Cat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Cat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Carnivore"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Clowder -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Clowder">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Group of cats</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Colony -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Colony">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Insect"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Group of Ants</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Cow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Cow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Herbivore"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Dog -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Dog">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Carnivore"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Fish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Fish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Flock -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Flock">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bird"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Group of parrots</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Goat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Goat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Herbivore"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#GoldFish -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#GoldFish">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Fish"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Omnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Group -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Group">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Habitat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Habitat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#inhabits"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Plant"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minQualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Herbivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Herbivore"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Herd -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Herd">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Group of Cattle</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Omnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Insect -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Insect">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Lizard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Lizard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Carnivore"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Reptile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Lounge -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Lounge">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Lizard"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Group of lizards</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Omnivore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Omnivore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Carnivore"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Herbivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Owl -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Owl">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bird"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Carnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Parliament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Parliament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bird"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Group of owls</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Parrot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Parrot">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bird"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Omnivore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Plant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Plant"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Predator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Predator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#inheres-in"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Plant"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Prey -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Prey">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#inheres-in"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Plant"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Reptile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Reptile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Animal"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Role -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Role"/>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#School -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#School">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#AnimalCollective"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#hasMember"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Fish"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Group of goldfish</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Turtle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Turtle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Omnivore"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Reptile"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Bird"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Fish"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Insect"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Mammal"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/a278383/ontologies/AnimalsOntology#Reptile"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
